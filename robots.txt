@@ -3,4 +3,4 @@ User-agent: *
 Allow: *.js
 Allow: *.css
 
-Sitemap: https://http://ctscorp.cz/sitemap.xml
+Sitemap: https://luko248.github.io/wug-schedule/sitemap.xml
