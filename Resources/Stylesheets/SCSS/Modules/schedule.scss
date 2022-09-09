@@ -62,8 +62,8 @@
         }
 
         > small{
-            --label-display: none;
-            display: var(--label-display);
+            // --label-display: none;
+            // display: var(--label-display);
             padding: .5em;
             background: var(--session-color);
             border-radius: .5em;

@@ -76,7 +76,7 @@ exports.data = [
                                 'speakers': [
                                     {
                                         'name': 'Pavel Málek',
-                                        'photo': 'https://wug.cz/ContentPages/GetFile.ashx?PhotoID=2587&ThumbnailSizeName=small',
+                                        'photo': 'https://wug.cz/ContentPages/GetFile.ashx?PhotoID=2930&ThumbnailSizeName=small',
                                         'role': ''
                                     }
                                 ]

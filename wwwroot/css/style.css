@@ -556,8 +556,6 @@ footer small {
       font-weight: 500;
       color: gray; }
     .session__head > small {
-      --label-display: none;
-      display: var(--label-display);
       padding: .5em;
       background: var(--session-color);
       border-radius: .5em;
