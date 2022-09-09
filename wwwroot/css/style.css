@@ -411,7 +411,7 @@ section {
   padding-block: 8vh; }
 
 .container {
-  inline-size: calc(100vw - $gap-xl);
+  inline-size: calc(100vw - 2rem);
   margin-inline: auto;
   max-inline-size: 1366px; }
 
@@ -426,8 +426,12 @@ section {
   bottom: 0;
   padding: 0;
   margin: 0;
+  background-color: white;
   list-style: none;
   margin-block-start: 1.6rem; }
+  @media only screen and (max-width: 2560px) {
+    .nav {
+      --schedule-gap: 0.2rem; } }
   .nav__button {
     display: block;
     width: 100%;
@@ -454,7 +458,10 @@ section {
   justify-content: flex-start;
   grid-template-columns: repeat(var(--col-count, 3), minmax(2.4rem, 1fr));
   gap: var(--schedule-gap, 1.6rem);
-  row-gap: var(--schedule-gap); }
+  row-gap: 1.6rem; }
+  @media only screen and (max-width: 768px) {
+    .schedule {
+      --col-count: 1; } }
   .schedule--active {
     --schedule-display: grid; }
 
@@ -493,6 +500,9 @@ section {
     font-size: .85em;
     list-style: none;
     pointer-events: var(--pointer-events, none); }
+    @media only screen and (max-width: 768px) {
+      .session details > summary {
+        --pointer-events: initial; } }
   .session details > summary:-webkit-details-marker, .session details > summary::marker {
     display: none; }
   .session details p {

@@ -2,7 +2,11 @@
 
 .schedule{
     @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
-    row-gap: var(--schedule-gap);
+    row-gap: $gap-l;
+
+    @include res-max-tablet{
+        --col-count: 1;
+    }
 
     &--active{
         --schedule-display: grid;    
@@ -49,11 +53,17 @@
     }
 
     details{
-        
+        &[open]{
+            
+        }
         > summary{
             font-size: .85em;
             list-style: none;
             pointer-events: var(--pointer-events, none);
+
+            @include res-max-tablet{
+                --pointer-events: initial;
+            }
         }
 
         > summary:-webkit-details-marker, > summary::marker{

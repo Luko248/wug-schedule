@@ -6,8 +6,13 @@
     bottom: 0;
     padding: 0;
     margin: 0;
+    background-color: $color-white;
     list-style: none;
     margin-block-start: $gap-l;
+
+    @include res-max-4k{
+        --schedule-gap: #{$gap-xs};
+    }
 
     &__button{
         display: block;
