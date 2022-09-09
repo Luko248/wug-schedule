@@ -407,4 +407,86 @@ small {
     font-weight: normal;
     color: var(--color-primary); }
 
+section {
+  padding-block: 8vh; }
+
+.container {
+  inline-size: calc(100vw - $gap-xl);
+  margin-inline: auto;
+  max-inline-size: 1366px; }
+
+.schedule {
+  display: grid;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: repeat(var(--col-count, 3), minmax(2.4rem, 1fr));
+  gap: var(--schedule-gap, 1.6rem);
+  row-gap: var(--schedule-gap); }
+
+.session {
+  padding: 1.6rem;
+  background-color: white;
+  border-radius: .25em;
+  font-size: 2rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2); }
+  .session--track-a {
+    --session-color: hsl(213, 49%, 55%); }
+  .session--track-b {
+    --session-color: hsl(47, 99%, 56%); }
+  .session--track-c {
+    --session-color: hsl(18, 74%, 55%); }
+  .session__head {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: normal;
+    justify-content: space-between;
+    gap: 0;
+    font-size: .5em;
+    margin-block-end: .5em; }
+    .session__head > time {
+      font-weight: bold; }
+    .session__head > small {
+      padding: .5em;
+      background: var(--session-color);
+      border-radius: .5em;
+      font-weight: 500;
+      line-height: 1;
+      color: white;
+      text-transform: uppercase; }
+  .session details > summary {
+    font-size: .85em;
+    list-style: none;
+    pointer-events: var(--pointer-events, none); }
+  .session details > summary:-webkit-details-marker, .session details > summary::marker {
+    display: none; }
+  .session details p {
+    font-size: .5em;
+    line-height: 1.5; }
+
+.speaker {
+  --pic-size: 4rem;
+  display: grid;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: var(--pic-size) minmax(1.6rem, 1fr);
+  gap: var(--speaker-gap, 1.6rem);
+  font-size: .6em;
+  margin-block: 1.6rem; }
+  .speaker span {
+    display: block; }
+  .speaker small {
+    font-weight: bold; }
+  .speaker__pic {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    inline-size: var(--pic-size); }
+    .speaker__pic > img {
+      position: absolute;
+      inset: 0 0 auto 0; }
+
 /*# sourceMappingURL=style.css.map */

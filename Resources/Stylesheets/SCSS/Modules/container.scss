@@ -1,0 +1,8 @@
+section{
+    padding-block: 8vh;
+}
+.container{
+    inline-size: calc(100vw - $gap-xl);
+    margin-inline: auto;
+    max-inline-size: $width-desktop-m;
+}

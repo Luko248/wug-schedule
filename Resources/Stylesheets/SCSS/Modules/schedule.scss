@@ -1,0 +1,92 @@
+@import "../Base/global";
+
+.schedule{
+    @include grid-columns(grid, repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
+    row-gap: var(--schedule-gap);
+}
+
+.session{
+    padding: $gap-l;
+    background-color: $color-white;
+    border-radius: .25em;
+    font-size: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+
+    &--track-a{
+        --session-color: hsl(213, 49%, 55%);
+    }
+
+    &--track-b{
+        --session-color: hsl(47, 99%, 56%);
+    }
+
+    &--track-c{
+        --session-color: hsl(18, 74%, 55%);
+    }
+
+    &__head{
+        @include flex-set(flex, row, nowrap, 0, center, space-between);
+        font-size: .5em;
+        margin-block-end: .5em;
+
+        > time{
+            font-weight: bold;
+        }
+
+        > small{
+            padding: .5em;
+            background: var(--session-color);
+            border-radius: .5em;
+            font-weight: 500;
+            line-height: 1;
+            color: $color-white;
+            text-transform: uppercase
+        }
+    }
+
+    details{
+        
+        > summary{
+            font-size: .85em;
+            list-style: none;
+            pointer-events: var(--pointer-events, none);
+        }
+
+        > summary:-webkit-details-marker, > summary::marker{
+            display: none;
+        }
+
+        p{
+            font-size: .5em;
+            line-height: 1.5;
+        }
+    }
+}
+
+.speaker{
+    --pic-size: 4rem;
+    @include grid-columns(grid, var(--pic-size) minmax($gap-l, 1fr), var(--speaker-gap, #{$gap-l}), center);
+    font-size: .6em;
+    margin-block: $gap-l;
+
+    span{
+        display: block;
+    }
+
+    small{
+        font-weight: bold;
+    }
+
+    &__pic{
+        position: relative;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        inline-size: var(--pic-size);
+
+        > img{
+            position: absolute;    
+            inset: 0 0 auto 0;
+        }
+    }
+}

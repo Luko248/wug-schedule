@@ -3,9 +3,11 @@
 @import "base/fonts";
 @import "base/default";
 @import "base/layout";
-@import "Base/shared-classes";
+@import "base/shared-classes";
 @import "base/typography";
 
 // Components
 
 // Modules
+@import "modules/container";
+@import "modules/schedule";
