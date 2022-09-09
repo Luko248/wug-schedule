@@ -1,7 +1,7 @@
 @import "../Base/global";
 
 .schedule{
-    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
+    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}), stretch);
     row-gap: $gap-l;
 
     @include res-max-tablet{
@@ -58,6 +58,7 @@
         }
         > summary{
             font-size: .85em;
+            font-weight: bold;
             list-style: none;
             pointer-events: var(--pointer-events, none);
 
@@ -91,7 +92,7 @@
         font-weight: bold;
     }
 
-    &__pic{
+    &__photo{
         position: relative;
         aspect-ratio: 1;
         border-radius: 50%;
@@ -99,8 +100,9 @@
         inline-size: var(--pic-size);
 
         > img{
-            position: absolute;    
-            inset: 0 0 auto 0;
+            position: absolute;
+            display: block;    
+            width: 100%;
         }
     }
 }

@@ -2,7 +2,7 @@ const track1Name = 'Aula'
 const track2Name = 'SF 2.162'
 const track3Name = 'SF 1.141'
 
-export const schedule = [
+export const data = [
     {
     'days': [
         {
@@ -10,7 +10,7 @@ export const schedule = [
             'name': 'Den 1',
             'tracks':[
                 {
-                    'track': track1Name,
+                    'title': track1Name,
                     'sessions': [
                         {
                             'title': 'Azure SQL Managed Instance Intro',
@@ -41,7 +41,7 @@ export const schedule = [
                     ]
                 },
                 {
-                    'track': track2Name,
+                    'title': track2Name,
                     'sessions': [
                         {
                             'title': 'Novinky v Microsoft SQL Serveru 2022',
@@ -72,7 +72,7 @@ export const schedule = [
                     ]
                 },
                 {
-                    'track': track3Name,
+                    'title': track3Name,
                     'sessions': [
                         {
                             'title': 'Power BI 101',
@@ -103,15 +103,7 @@ export const schedule = [
                     ]
                 }
             ]
-        },
-        {
-            'date': '2008-09-13',
-            'name': 'Den 2',
-        },
-        {
-            'date': '2008-09-14',
-            'name': 'Den 3',
-        },
+        }
     ]
     }     
 ]

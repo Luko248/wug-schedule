@@ -453,7 +453,7 @@ section {
 
 .schedule {
   display: var(--schedule-display, none);
-  align-items: flex-start;
+  align-items: stretch;
   align-content: flex-start;
   justify-content: flex-start;
   grid-template-columns: repeat(var(--col-count, 3), minmax(2.4rem, 1fr));
@@ -498,6 +498,7 @@ section {
       text-transform: uppercase; }
   .session details > summary {
     font-size: .85em;
+    font-weight: bold;
     list-style: none;
     pointer-events: var(--pointer-events, none); }
     @media only screen and (max-width: 768px) {
@@ -523,14 +524,15 @@ section {
     display: block; }
   .speaker small {
     font-weight: bold; }
-  .speaker__pic {
+  .speaker__photo {
     position: relative;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
     inline-size: var(--pic-size); }
-    .speaker__pic > img {
+    .speaker__photo > img {
       position: absolute;
-      inset: 0 0 auto 0; }
+      display: block;
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
