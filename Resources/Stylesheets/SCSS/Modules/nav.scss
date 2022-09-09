@@ -18,7 +18,7 @@
     bottom: 0;
     padding: 0;
     margin: 0;
-    background-color: $color-white;
+    background-color: $color-bg;
     list-style: none;
     margin-block-start: $gap-l;
     padding-block: $gap-l;
@@ -26,6 +26,15 @@
     @include res-max-tablet{
         --schedule-gap: #{$gap-xs};
         padding-block: $gap;
+    }
+
+    &:after{
+        position: absolute;
+        right: -$gap;
+        left: -$gap;
+        content: '';
+        background-color: inherit;
+        z-index: -1;
     }
 
     &__button{
@@ -74,9 +83,17 @@
     @include res-max-tablet{
         --tracks-display: none;
     }
+    &:after{
+        position: absolute;
+        right: -$gap;
+        left: -$gap;
+        content: '';
+        background-color: inherit;
+        z-index: -1;
+    }
     
-    >div{
-        padding: 1rem;
+    > div{
+        padding: $gap-s;
         background-color: var(--track-bg-color);
         border-radius: .25em;
         font-size: 1.5rem;
