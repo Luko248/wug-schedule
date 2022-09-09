@@ -1,12 +1,23 @@
 import { data } from "./data/schedule";
 
 export function initSchedule(){
+    generateContent()
+    hideSessionContentOnTablet()
+    handleSelectDay()
+}
+
+function handleSelectDay(){
     const navButtons = document.querySelectorAll('.nav__button')
     const scheduleDays = document.querySelectorAll('.schedule')
 
     for (let i = 0; i < scheduleDays.length; i++){
         const button = navButtons[i]
         const day = scheduleDays[i]
+
+        if (i + 1 === getConferenceDay()){
+            button.classList.add('nav__button--active')
+            day.classList.add('schedule--active')
+        }
 
         button.addEventListener('click', () => {
             scheduleDays.forEach(day => {
@@ -17,10 +28,41 @@ export function initSchedule(){
             })
             button.classList.add('nav__button--active')
             day.classList.add('schedule--active')
-        })
+        })    
     }
+}
 
-    generateContent()
+function getConferenceDay(){
+    const currentDate = new Date();
+    let today = currentDate.getDate();
+    const firstDayDate = new Date('2022-09-12').getDate()
+    const secondDayDate = new Date('2022-09-12').getDate()
+    const thirdDayDate = new Date('2022-09-12').getDate()
+    let conferenceDay = 0
+
+   if (today <= firstDayDate){
+    conferenceDay = 1
+   }
+   else if (today > firstDayDate && today < thirdDayDate){
+    conferenceDay = 2
+   }
+   else{
+    conferenceDay = 3
+   }
+
+//    console.log(conferenceDay)
+   return conferenceDay
+}
+
+function hideSessionContentOnTablet(){
+    const details = document.querySelectorAll('details')
+    const tabletResolution = 768
+
+    if (window.innerWidth <= tabletResolution){
+        details.forEach(detailsElem => {
+            detailsElem.removeAttribute('open')
+        })    
+    }
 }
 
 function generateContent(){
@@ -34,28 +76,34 @@ function generateContent(){
 }
 
 function createDay(day){
-    const dayElement = document.createElement('div')
-    dayElement.setAttribute('class', 'schedule schedule--active')
-    dayElement.setAttribute('data-date', day.date)
+    const tracksWrapper = document.querySelector('.tracks')
 
+    const dayElement = document.createElement('div')
+    dayElement.setAttribute('class', 'schedule')
+    dayElement.setAttribute('data-date', day.date)
+    
     day.tracks.map((track) => {
         track.sessions.map((session) =>{
-            dayElement.appendChild(createSession(session))
+            dayElement.appendChild(createSession(session, track))
         })
     })
 
-    console.log('Day: ' + day.date + ' generated')
+    // console.log('Day: ' + day.date + ' generated')
     return dayElement as HTMLElement
 }
 
-function createSession(session){
+function createSession(session, track){
     const sessionTime = document.createElement('time')
     sessionTime.setAttribute('datetime', session.dateTimeStart)
     sessionTime.innerHTML = handleTime(new Date(session.dateTimeStart)) + ' - ' + handleTime(new Date(session.dateTimeEnd))
 
+    const sessionTrack = document.createElement('small')
+    sessionTrack.innerHTML = track.title
+
     const sessionHead = document.createElement('div')
     sessionHead.setAttribute('class', 'session__head')
     sessionHead.appendChild(sessionTime)
+    sessionHead.appendChild(sessionTrack)
 
     const sessionTitle = document.createElement('summary')
     sessionTitle.innerHTML = session.title
@@ -74,11 +122,12 @@ function createSession(session){
 
     const sessionElem = document.createElement('div')
     sessionElem.setAttribute('class', 'session')
+    sessionElem.setAttribute('data-track', track.title)
 
     sessionElem.appendChild(sessionHead)
     sessionElem.appendChild(sessionContent)
 
-    console.log('Session: ' + session.title +' generated')
+    // console.log('Session: ' + session.title +' generated')
     return sessionElem as HTMLElement
 }
 
@@ -107,7 +156,7 @@ function createSpeaker(speaker){
 
     speakerElem.appendChild(speakerPhotoWrapper)
     speakerElem.appendChild(speakerContentWrapper)
-    console.log('Speaker: ' + speaker.name + ' generated')
+    // console.log('Speaker: ' + speaker.name + ' generated')
     return speakerElem as HTMLElement
 }
 

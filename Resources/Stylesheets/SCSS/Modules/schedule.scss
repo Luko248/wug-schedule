@@ -1,8 +1,14 @@
 @import "../Base/global";
 
 .schedule{
-    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}), stretch);
+    --col-count: 3;
+    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}), stretch);
+    grid-auto-flow: column;
     row-gap: $gap-l;
+
+    @include res-max-tablet{
+        grid-auto-flow: unset;
+    }
 
     @include res-max-tablet{
         --col-count: 1;
@@ -19,17 +25,25 @@
     border-radius: .25em;
     font-size: 2rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    grid-column-start: var(--col-start);
 
-    &--track-a{
+    &[data-track*="Aula"]{
         --session-color: hsl(213, 49%, 55%);
+        --col-start: 1;
     }
 
-    &--track-b{
+    &[data-track*="SF 2.162"]{
         --session-color: hsl(47, 99%, 56%);
+        --col-start: 2;
     }
 
-    &--track-c{
+    &[data-track*="SF 1.141"]{
         --session-color: hsl(18, 74%, 55%);
+        --col-start: 3;
+    }
+
+    @include res-max-tablet{
+        --col-start: 1 !important;
     }
 
     &__head{
@@ -42,13 +56,19 @@
         }
 
         > small{
+            --label-display: none;
+            display: var(--label-display);
             padding: .5em;
             background: var(--session-color);
             border-radius: .5em;
             font-weight: 500;
             line-height: 1;
             color: $color-white;
-            text-transform: uppercase
+            text-transform: uppercase;
+
+            @include res-max-tablet{
+                --label-display: inline-block;
+            }
         }
     }
 
@@ -57,10 +77,11 @@
             
         }
         > summary{
+            --pointer-events: none;
             font-size: .85em;
             font-weight: bold;
             list-style: none;
-            pointer-events: var(--pointer-events, none);
+            pointer-events: var(--pointer-events);
 
             @include res-max-tablet{
                 --pointer-events: initial;
