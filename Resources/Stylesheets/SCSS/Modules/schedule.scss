@@ -1,8 +1,12 @@
 @import "../Base/global";
 
 .schedule{
-    @include grid-columns(grid, repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
+    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
     row-gap: var(--schedule-gap);
+    
+    &--visible{
+        --schedule-display: grid;    
+    }
 }
 
 .session{
