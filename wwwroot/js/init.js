@@ -424,16 +424,27 @@ function createSession(session, track) {
     sessionDesc.innerHTML = session.description;
     const sessionContent = document.createElement('details');
     sessionContent.setAttribute('open', null);
-    sessionContent.appendChild(sessionTitle);
+    const sessionSpeakersWrapper = document.createElement('div');
+    sessionSpeakersWrapper.setAttribute('class', 'session__speakers');
     session.speakers.map((speaker) => {
-        sessionContent.appendChild(createSpeaker(speaker));
+        sessionSpeakersWrapper.appendChild(createSpeaker(speaker));
     });
+    const sessionFooter = document.createElement('div');
+    sessionFooter.setAttribute('class', 'session__footer');
+    session.speakers.map((speaker) => {
+        const speker = document.createElement('span');
+        speker.innerHTML = speaker.name;
+        sessionFooter.appendChild(speker);
+    });
+    sessionContent.appendChild(sessionTitle);
+    sessionContent.appendChild(sessionSpeakersWrapper);
     sessionContent.appendChild(sessionDesc);
     const sessionElem = document.createElement('div');
     sessionElem.setAttribute('class', 'session');
     sessionElem.setAttribute('data-track', track.title);
     sessionElem.appendChild(sessionHead);
     sessionElem.appendChild(sessionContent);
+    sessionElem.appendChild(sessionFooter);
     // console.log('Session: ' + session.title +' generated')
     return sessionElem;
 }

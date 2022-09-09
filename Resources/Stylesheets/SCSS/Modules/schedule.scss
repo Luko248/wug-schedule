@@ -20,12 +20,17 @@
 }
 
 .session{
+    --footer-display: none;
     padding: $gap-l;
     background-color: $color-white;
     border-radius: .25em;
     font-size: 2rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     grid-column-start: var(--col-start);
+
+    @include res-max-tablet{
+        --footer-display: block;
+    }
 
     &[data-track*="Aula"]{
         --session-color: hsl(213, 49%, 55%);
@@ -48,11 +53,12 @@
 
     &__head{
         @include flex-set(flex, row, nowrap, 0, center, space-between);
-        font-size: .5em;
+        font-size: .6em;
         margin-block-end: .5em;
 
         > time{
-            font-weight: bold;
+            font-weight: 500;
+            color: gray;
         }
 
         > small{
@@ -61,8 +67,8 @@
             padding: .5em;
             background: var(--session-color);
             border-radius: .5em;
-            font-weight: 500;
-            line-height: 1;
+            font-weight: bold;
+            line-height: 1;            
             color: $color-white;
             text-transform: uppercase;
 
@@ -72,9 +78,28 @@
         }
     }
 
+    &__speakers{
+        @include grid-columns(grid, repeat(auto-fit, minmax($gap-xl, 1fr)), $gap, stretch);
+    }
+
+    &__footer{
+        display: var(--footer-display);
+        font-size: .65em;
+        color: gray;
+        margin-block-start: 1rem;
+
+        >span:not(:last-of-type):after{
+            content: ', ';       
+        }
+    }
+
     details{
         &[open]{
-            
+            + .session__footer{
+                @include res-max-tablet{
+                    --footer-display: none;
+                }
+            }
         }
         > summary{
             --pointer-events: none;
@@ -93,7 +118,7 @@
         }
 
         p{
-            font-size: .5em;
+            font-size: .65em;
             line-height: 1.5;
         }
     }
@@ -107,10 +132,18 @@
 
     span{
         display: block;
+        font-weight: 600;
     }
 
     small{
+        font-size: .8em;
         font-weight: bold;
+        color: gray;
+
+        &:empty{
+            display: block;
+            min-height: 1em;
+        }
     }
 
     &__photo{
@@ -118,6 +151,7 @@
         aspect-ratio: 1;
         border-radius: 50%;
         overflow: hidden;
+        box-shadow: 0 0 5px hsla(0,0%,0%,.2);
         inline-size: var(--pic-size);
 
         > img{

@@ -25,6 +25,7 @@
 
     @include res-max-tablet{
         --schedule-gap: #{$gap-xs};
+        padding-block: $gap;
     }
 
     &__button{

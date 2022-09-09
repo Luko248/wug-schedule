@@ -6,3 +6,7 @@ section{
     margin-inline: auto;
     max-inline-size: $width-desktop-m;
 }
+
+footer small{
+        padding-block: $gap;
+    }

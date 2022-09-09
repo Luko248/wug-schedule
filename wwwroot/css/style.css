@@ -59,6 +59,7 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto';
   overflow-x: hidden;
   overflow-y: scroll; }
 
@@ -415,6 +416,9 @@ section {
   margin-inline: auto;
   max-inline-size: 1366px; }
 
+footer small {
+  padding-block: 0.8rem; }
+
 .logo {
   display: block;
   inline-size: clamp(10rem, 20vw, 20rem);
@@ -441,7 +445,8 @@ section {
   padding-block: 1.6rem; }
   @media only screen and (max-width: 768px) {
     .nav {
-      --schedule-gap: 0.2rem; } }
+      --schedule-gap: 0.2rem;
+      padding-block: 0.8rem; } }
   .nav__button {
     display: block;
     width: 100%;
@@ -516,12 +521,16 @@ section {
     --schedule-display: grid; }
 
 .session {
+  --footer-display: none;
   padding: 1.6rem;
   background-color: white;
   border-radius: .25em;
   font-size: 2rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   grid-column-start: var(--col-start); }
+  @media only screen and (max-width: 768px) {
+    .session {
+      --footer-display: block; } }
   .session[data-track*="Aula"] {
     --session-color: hsl(213, 49%, 55%);
     --col-start: 1; }
@@ -541,23 +550,41 @@ section {
     align-content: normal;
     justify-content: space-between;
     gap: 0;
-    font-size: .5em;
+    font-size: .6em;
     margin-block-end: .5em; }
     .session__head > time {
-      font-weight: bold; }
+      font-weight: 500;
+      color: gray; }
     .session__head > small {
       --label-display: none;
       display: var(--label-display);
       padding: .5em;
       background: var(--session-color);
       border-radius: .5em;
-      font-weight: 500;
+      font-weight: bold;
       line-height: 1;
       color: white;
       text-transform: uppercase; }
       @media only screen and (max-width: 768px) {
         .session__head > small {
           --label-display: inline-block; } }
+  .session__speakers {
+    display: grid;
+    align-items: stretch;
+    align-content: flex-start;
+    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(2.4rem, 1fr));
+    gap: 0.8rem; }
+  .session__footer {
+    display: var(--footer-display);
+    font-size: .65em;
+    color: gray;
+    margin-block-start: 1rem; }
+    .session__footer > span:not(:last-of-type):after {
+      content: ', '; }
+  @media only screen and (max-width: 768px) {
+    .session details[open] + .session__footer {
+      --footer-display: none; } }
   .session details > summary {
     --pointer-events: none;
     font-size: .85em;
@@ -570,7 +597,7 @@ section {
   .session details > summary:-webkit-details-marker, .session details > summary::marker {
     display: none; }
   .session details p {
-    font-size: .5em;
+    font-size: .65em;
     line-height: 1.5; }
 
 .speaker {
@@ -584,14 +611,21 @@ section {
   font-size: .6em;
   margin-block: 1.6rem; }
   .speaker span {
-    display: block; }
+    display: block;
+    font-weight: 600; }
   .speaker small {
-    font-weight: bold; }
+    font-size: .8em;
+    font-weight: bold;
+    color: gray; }
+    .speaker small:empty {
+      display: block;
+      min-height: 1em; }
   .speaker__photo {
     position: relative;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     inline-size: var(--pic-size); }
     .speaker__photo > img {
       position: absolute;
