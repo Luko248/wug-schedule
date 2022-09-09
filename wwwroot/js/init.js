@@ -283,7 +283,6 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const schedule_1 = __webpack_require__(/*! ./schedule */ "./Resources/Scripts/schedule.ts");
 document.addEventListener("DOMContentLoaded", () => {
     (0, schedule_1.initSchedule)();
-    // initMap()
 });
 
 })();
