@@ -3,8 +3,8 @@
 .schedule{
     @include grid-columns(var(--schedule-display, none), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
     row-gap: var(--schedule-gap);
-    
-    &--visible{
+
+    &--active{
         --schedule-display: grid;    
     }
 }
