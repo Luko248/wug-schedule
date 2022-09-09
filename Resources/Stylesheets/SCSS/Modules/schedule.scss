@@ -79,7 +79,12 @@
     }
 
     &__speakers{
-        @include grid-columns(grid, repeat(auto-fit, minmax($gap-xl, 1fr)), $gap, stretch);
+        --col-count: auto-fit;
+        @include grid-columns(grid, repeat(var(--col-count), minmax($gap-xl, 1fr)), $gap, stretch);
+
+        @include res-max-tablet{
+            --col-count: 1;
+        }
     }
 
     &__footer{

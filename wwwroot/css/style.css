@@ -569,12 +569,16 @@ footer small {
         .session__head > small {
           --label-display: inline-block; } }
   .session__speakers {
+    --col-count: auto-fit;
     display: grid;
     align-items: stretch;
     align-content: flex-start;
     justify-content: flex-start;
-    grid-template-columns: repeat(auto-fit, minmax(2.4rem, 1fr));
+    grid-template-columns: repeat(var(--col-count), minmax(2.4rem, 1fr));
     gap: 0.8rem; }
+    @media only screen and (max-width: 768px) {
+      .session__speakers {
+        --col-count: 1; } }
   .session__footer {
     display: var(--footer-display);
     font-size: .65em;
