@@ -27,26 +27,6 @@
   --nav-height: 7rem;
   --gap-multiplier: 1; }
 
-@media only screen and (max-width: 768px) {
-  :root {
-    --trans-time: 0; } }
-
-@font-face {
-  font-family: "zurrich";
-  font-weight: 400;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/zurrich/regular/zurrich.eot");
-  src: url("../fonts/zurrich/regular/zurrich.eot?#iefix") format("embedded-opentype"), url("../fonts/zurrich/regular/zurrich.woff2") format("woff2"), url("../fonts/zurrich/regular/zurrich.ttf") format("truetype"), url("../fonts/zurrich/regular/zurrich.otf") format("opentype"); }
-
-@font-face {
-  font-family: "zurrich-bold";
-  font-weight: 700;
-  font-display: fallback;
-  font-style: normal;
-  src: url("../fonts/zurrich/bold/zurrich-bold.eot");
-  src: url("../fonts/zurrich/bold/zurrich-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/zurrich/bold/zurrich-bold.woff2") format("woff2"), url("../fonts/zurrich/bold/zurrich-bold.ttf") format("truetype"), url("../fonts/zurrich/bold/zurrich-bold.otf") format("opentype"); }
-
 * {
   box-sizing: border-box; }
 
@@ -63,17 +43,7 @@ body {
   background-attachment: fixed;
   font-family: 'Roboto';
   background-size: contain;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-
-address {
-  font-style: normal; }
-
-textarea {
-  font-family: inherit; }
-
-section {
-  scroll-margin-top: calc(var(--nav-height) * -0.5); }
+  overflow-x: hidden; }
 
 body {
   display: flex;
@@ -90,12 +60,6 @@ body {
     flex: 0 0 auto;
     width: 100%; }
 
-.center-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
-
 .text-to-center {
   text-align: center; }
 
@@ -108,71 +72,6 @@ h6,
 p,
 ul {
   margin: 0; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  font-family: var(--font-title); }
-
-p,
-span,
-small {
-  font-family: var(--font-text); }
-
-.title {
-  --title-color: black;
-  font-size: 3em;
-  font-weight: 600;
-  color: var(--title-color); }
-  @media only screen and (min-width: 769px) {
-    .title {
-      font-size: 3.2em; } }
-  @media only screen and (min-width: 1367px) {
-    .title {
-      font-size: 4em; } }
-  .title > strong {
-    display: block;
-    font-size: 0.4em;
-    font-weight: 400;
-    color: var(--color-primary);
-    text-transform: uppercase; }
-  .title--absolute {
-    --title-left: 15%;
-    position: absolute;
-    top: 8rem;
-    left: 15%;
-    z-index: 50; }
-    @media only screen and (max-width: 1440px) {
-      .title--absolute {
-        --title-left: 10%; } }
-    @media only screen and (max-width: 1366px) {
-      .title--absolute {
-        --title-left: var(--pad-base); } }
-    @media only screen and (max-width: 425px) {
-      .title--absolute {
-        --title-left: 1rem; } }
-
-.desc {
-  --desc-font-size: 22px;
-  font-family: "open-sans", sans-serif;
-  font-size: var(--desc-font-size);
-  font-weight: 300;
-  line-height: 1.7; }
-  @media only screen and (max-width: 1024px) {
-    .desc {
-      --desc-font-size: large; } }
-  @media only screen and (max-width: 768px) {
-    .desc--form {
-      line-height: 1.4; } }
-  .desc a {
-    color: var(--color-secondary); }
-  .desc .primary-link {
-    font-weight: normal;
-    color: var(--color-primary); }
 
 section {
   padding-block: 5vh; }

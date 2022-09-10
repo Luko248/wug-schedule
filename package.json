@@ -1,17 +1,13 @@
 {
-  "version": "1.1.0",
-  "name": "cts_corp_website",
-  "description": "webpack with stylelint config. Updated on 30.3.2022",
+  "version": "1.0.0",
+  "name": "wug_schedule_website",
+  "description": "webpack with stylelint config. Updated on 10.9.2022",
   "private": true,
   "main": "./postcss.config.js",
   "author": "Riganti s.r.o.",
   "license": "ISC",
   "devDependencies": {
-    "@googlemaps/js-api-loader": "^1.13.10",
-    "@googlemaps/markerclusterer": "^1.0.25",
-    "@types/googlemaps": "^3.43.3",
     "autoprefixer": "^10.4.4",
-    "axios": "^0.26.1",
     "browser-sync": "^2.27.9",
     "clean-css-cli": "^5.5.2",
     "node-sass": "^7.0.1",
@@ -33,7 +29,7 @@
   "browserslist": {
     "production": [
       "defaults",
-      "IE 11",
+      "not IE 11",
       "not IE_Mob 11"
     ],
     "development": [

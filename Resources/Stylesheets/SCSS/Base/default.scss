@@ -17,16 +17,4 @@ body {
   font-family: 'Roboto';
   background-size: contain;
   overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-address {
-  font-style: normal;
-}
-
-textarea {
-  font-family: inherit;
-}
-section {
-  scroll-margin-top: calc(var(--nav-height) * -0.5);
 }

@@ -1,14 +1,12 @@
 ﻿// Base
 @import "base/root";
-@import "base/fonts";
 @import "base/default";
 @import "base/layout";
-@import "base/shared-classes";
+@import "base/classes";
 @import "base/typography";
 
 // Components
-
+@import "components/container";
+@import "components/nav";
 // Modules
-@import "modules/container";
-@import "modules/nav";
 @import "modules/schedule";
