@@ -12,62 +12,6 @@
     }
 }
 
-.nav{
-    @include grid-columns(grid, repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
-    position: sticky;
-    bottom: 0;
-    padding: 0;
-    margin: 0;
-    background-color: $color-bg;
-    list-style: none;
-    margin-block-start: $gap-l;
-    padding-block: $gap-l;
-
-    @include res-max-tablet{
-        --schedule-gap: #{$gap-xs};
-        padding-block: $gap;
-    }
-
-    &:after{
-        position: absolute;
-        right: -$gap;
-        left: -$gap;
-        content: '';
-        background-color: inherit;
-        z-index: -1;
-    }
-
-    &__button{
-        display: block;
-        width: 100%;
-        background-color: var(--btn-bg-color, hsl(0, 0%, 20%));
-        border-width: 0;
-        border-radius: .25em;
-        font-size: 2rem;
-        color: $color-white;
-        text-align: center;
-        text-transform: uppercase;
-        transition: background-color $trans-time ease-in-out;
-        cursor: pointer;
-        padding-block: .5em;
-
-        &--active{
-            --btn-bg-color: hsl(0, 0%, 0%);
-        }
-
-        @media (hover: hover){
-            &:hover{
-                --btn-bg-color: hsl(0, 0%, 0%);
-            }
-        }
-
-        >time{
-            display: block;
-            font-size: .5em;
-        }
-    }
-}
-
 .tracks{
     --tracks-display: grid;
     @include grid-columns(var(--tracks-display), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--tracks-gap, #{$gap-l}));
@@ -109,6 +53,66 @@
     
         &[data-track*="SF 1.141"]{
             --track-bg-color: hsl(18, 74%, 55%);
+        }
+    }
+}
+
+.nav{
+    @include grid-columns(grid, repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}));
+    position: sticky;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $color-bg;
+    list-style: none;
+    margin-block-start: $gap-l;
+    padding-block: $gap-l;
+
+    @include res-max-tablet{
+        --schedule-gap: #{$gap-xs};
+        padding-block: $gap;
+    }
+
+    &:after{
+        position: absolute;
+        right: -$gap;
+        left: -$gap;
+        content: '';
+        background-color: inherit;
+        z-index: -1;
+    }
+
+    &__button{
+        display: block;
+        width: 100%;
+        background-color: var(--btn-bg-color, hsl(0, 0%, 20%));
+        border-width: 0;
+        border-radius: .25em;
+        font-size: var(--btn-font-size, 2rem);
+        color: $color-white;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background-color $trans-time ease-in-out;
+        cursor: pointer;
+        padding-block: .5em;
+
+        &--active{
+            --btn-bg-color: hsl(0, 0%, 0%);
+        }
+
+        @include res-max-tablet{
+            --btn-font-size: 1rem;
+        }
+
+        @media (hover: hover){
+            &:hover{
+                --btn-bg-color: hsl(0, 0%, 0%);
+            }
+        }
+
+        >time{
+            display: block;
+            font-size: .65em;
         }
     }
 }

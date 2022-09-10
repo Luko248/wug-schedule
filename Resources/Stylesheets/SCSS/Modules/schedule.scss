@@ -110,16 +110,15 @@
             --pointer-events: none;
             font-size: .85em;
             font-weight: bold;
-            list-style: none;
             pointer-events: var(--pointer-events);
 
             @include res-max-tablet{
                 --pointer-events: initial;
             }
-        }
 
-        > summary:-webkit-details-marker, > summary::marker{
-            display: none;
+            @include res-min-tablet{
+                list-style: none;
+            }
         }
 
         p{

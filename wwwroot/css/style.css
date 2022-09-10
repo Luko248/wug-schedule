@@ -93,54 +93,6 @@ footer small {
     display: block;
     width: 100%; }
 
-.nav {
-  display: grid;
-  align-items: flex-start;
-  align-content: flex-start;
-  justify-content: flex-start;
-  grid-template-columns: repeat(var(--col-count, 3), minmax(2.4rem, 1fr));
-  gap: var(--schedule-gap, 1.6rem);
-  position: sticky;
-  bottom: 0;
-  padding: 0;
-  margin: 0;
-  background-color: #e6e6e6;
-  list-style: none;
-  margin-block-start: 1.6rem;
-  padding-block: 1.6rem; }
-  @media only screen and (max-width: 768px) {
-    .nav {
-      --schedule-gap: 0.2rem;
-      padding-block: 0.8rem; } }
-  .nav:after {
-    position: absolute;
-    right: -0.8rem;
-    left: -0.8rem;
-    content: '';
-    background-color: inherit;
-    z-index: -1; }
-  .nav__button {
-    display: block;
-    width: 100%;
-    background-color: var(--btn-bg-color, #333333);
-    border-width: 0;
-    border-radius: .25em;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    transition: background-color 0.25s ease-in-out;
-    cursor: pointer;
-    padding-block: .5em; }
-    .nav__button--active {
-      --btn-bg-color: hsl(0, 0%, 0%); }
-    @media (hover: hover) {
-      .nav__button:hover {
-        --btn-bg-color: hsl(0, 0%, 0%); } }
-    .nav__button > time {
-      display: block;
-      font-size: .5em; }
-
 .tracks {
   --tracks-display: grid;
   display: var(--tracks-display);
@@ -179,6 +131,57 @@ footer small {
       --track-bg-color: hsl(47, 99%, 56%); }
     .tracks > div[data-track*="SF 1.141"] {
       --track-bg-color: hsl(18, 74%, 55%); }
+
+.nav {
+  display: grid;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: repeat(var(--col-count, 3), minmax(2.4rem, 1fr));
+  gap: var(--schedule-gap, 1.6rem);
+  position: sticky;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #e6e6e6;
+  list-style: none;
+  margin-block-start: 1.6rem;
+  padding-block: 1.6rem; }
+  @media only screen and (max-width: 768px) {
+    .nav {
+      --schedule-gap: 0.2rem;
+      padding-block: 0.8rem; } }
+  .nav:after {
+    position: absolute;
+    right: -0.8rem;
+    left: -0.8rem;
+    content: '';
+    background-color: inherit;
+    z-index: -1; }
+  .nav__button {
+    display: block;
+    width: 100%;
+    background-color: var(--btn-bg-color, #333333);
+    border-width: 0;
+    border-radius: .25em;
+    font-size: var(--btn-font-size, 2rem);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
+    padding-block: .5em; }
+    .nav__button--active {
+      --btn-bg-color: hsl(0, 0%, 0%); }
+    @media only screen and (max-width: 768px) {
+      .nav__button {
+        --btn-font-size: 1rem; } }
+    @media (hover: hover) {
+      .nav__button:hover {
+        --btn-bg-color: hsl(0, 0%, 0%); } }
+    .nav__button > time {
+      display: block;
+      font-size: .65em; }
 
 .schedule {
   --col-count: 3;
@@ -270,13 +273,13 @@ footer small {
     --pointer-events: none;
     font-size: .85em;
     font-weight: bold;
-    list-style: none;
     pointer-events: var(--pointer-events); }
     @media only screen and (max-width: 768px) {
       .session details > summary {
         --pointer-events: initial; } }
-  .session details > summary:-webkit-details-marker, .session details > summary::marker {
-    display: none; }
+    @media only screen and (min-width: 769px) {
+      .session details > summary {
+        list-style: none; } }
   .session details p {
     font-size: .65em;
     line-height: 1.5; }
