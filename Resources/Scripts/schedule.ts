@@ -12,11 +12,12 @@ function handleSelectDay(){
 
     for (let i = 0; i < scheduleDays.length; i++){
         const button = navButtons[i]
-        const day = scheduleDays[i]
+        const day = scheduleDays[i] as HTMLElement
 
         if (i + 1 === getConferenceDay()){
             button.classList.add('nav__button--active')
             day.classList.add('schedule--active')
+            getSessionsCount(day)           
         }
 
         button.addEventListener('click', () => {
@@ -28,8 +29,14 @@ function handleSelectDay(){
             })
             button.classList.add('nav__button--active')
             day.classList.add('schedule--active')
-        })    
-    }
+            getSessionsCount(day)
+        })
+    } 
+}
+
+function getSessionsCount(schedule){
+    const sessionsCount = document.querySelectorAll('.schedule--active > .session').length
+    schedule.classList.add('sessions-' + sessionsCount.toString())
 }
 
 function getConferenceDay(){
@@ -76,8 +83,6 @@ function generateContent(){
 }
 
 function createDay(day){
-    const tracksWrapper = document.querySelector('.tracks')
-
     const dayElement = document.createElement('div')
     dayElement.setAttribute('class', 'schedule')
     dayElement.setAttribute('data-date', day.date)
@@ -133,8 +138,7 @@ function createSession(session, track){
     sessionContent.appendChild(sessionDesc)
 
     const sessionElem = document.createElement('div')
-    sessionElem.setAttribute('class', 'session')
-    sessionElem.setAttribute('data-track', track.title)
+    sessionElem.setAttribute('class', 'session session--' + track.title.replace(" ", "-").replace(".", "-").toLowerCase())
 
     sessionElem.appendChild(sessionHead)
     sessionElem.appendChild(sessionContent)

@@ -1,21 +1,157 @@
 @import "../Base/global";
-
 .schedule{
+    $session-count: get-number("6");
     --col-count: 3;
-    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}), stretch);
+    @include grid-columns(var(--schedule-display, none), repeat(var(--col-count), minmax($gap-xl, 1fr)), var(--schedule-gap, #{$gap-l}), var(--align-items, stretch));
     grid-auto-flow: column;
     row-gap: $gap-l;
 
     @include res-max-tablet{
-        grid-auto-flow: unset;
-    }
-
-    @include res-max-tablet{
         --col-count: 1;
+        --align-items: flex-start;
+        grid-auto-flow: unset;
     }
 
     &--active{
         --schedule-display: grid;    
+    }
+
+    &[class*="18"] > .session{
+        //track 1
+        &:nth-child(1){
+            --row-start: 1;        
+        }
+
+        &:nth-child(2){
+            --row-start: 4;        
+        }
+
+        &:nth-child(3){
+            --row-start: 7;        
+        }
+
+        &:nth-child(4){
+            --row-start: 10;        
+        }
+        
+        &:nth-child(5){
+            --row-start: 13;        
+        }
+
+        &:nth-child(6){
+            --row-start: 16;        
+        }  
+        //track 2
+        &:nth-child(7){
+            --row-start: 2;        
+        }
+
+        &:nth-child(8){
+            --row-start: 5;        
+        }
+
+        &:nth-child(9){
+            --row-start: 8;        
+        }
+
+        &:nth-child(10){
+            --row-start: 11;        
+        }
+        
+        &:nth-child(11){
+            --row-start: 14;        
+        }
+
+        &:nth-child(12){
+            --row-start: 17;        
+        }
+        //track 3
+        &:nth-child(13){
+            --row-start: 3;        
+        }
+
+        &:nth-child(14){
+            --row-start: 6;        
+        }
+
+        &:nth-child(15){
+            --row-start: 9;        
+        }
+
+        &:nth-child(16){
+            --row-start: 12;        
+        }
+        
+        &:nth-child(17){
+            --row-start: 15;        
+        }
+
+        &:nth-child(18){
+            --row-start: 18;        
+        }
+    }
+
+    &[class*="15"] > .session{
+        //track 1
+        &:nth-child(1){
+            --row-start: 1;        
+        }
+
+        &:nth-child(2){
+            --row-start: 4;        
+        }
+
+        &:nth-child(3){
+            --row-start: 7;        
+        }
+
+        &:nth-child(4){
+            --row-start: 10;        
+        }
+        
+        &:nth-child(5){
+            --row-start: 13;        
+        }
+        //track 2
+        &:nth-child(6){
+            --row-start: 2;        
+        }
+
+        &:nth-child(7){
+            --row-start: 5;        
+        }
+
+        &:nth-child(8){
+            --row-start: 8;        
+        }
+
+        &:nth-child(9){
+            --row-start: 11;        
+        }
+        
+        &:nth-child(10){
+            --row-start: 14;        
+        }
+        //track 3
+        &:nth-child(11){
+            --row-start: 3;        
+        }
+
+        &:nth-child(12){
+            --row-start: 6;        
+        }
+
+        &:nth-child(13){
+            --row-start: 9;        
+        }
+
+        &:nth-child(14){
+            --row-start: 12;        
+        }
+        
+        &:nth-child(15){
+            --row-start: 15;        
+        }
     }
 }
 
@@ -25,31 +161,29 @@
     background-color: $color-white;
     border-radius: .25em;
     font-size: 2rem;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);     
     grid-column-start: var(--col-start);
 
     @include res-max-tablet{
         --footer-display: block;
+        --col-start: 1 !important;
+        grid-row-start: var(--row-start);    
     }
 
-    &[data-track*="Aula"]{
-        --session-color: hsl(213, 49%, 55%);
+    &--aula{
+        --session-color: #{$color-wug-blue};
         --col-start: 1;
     }
 
-    &[data-track*="SF 2.162"]{
-        --session-color: hsl(47, 99%, 56%);
+    &--sf-2-162{
+        --session-color: #{$color-wug-yellow};
         --col-start: 2;
     }
 
-    &[data-track*="SF 1.141"]{
-        --session-color: hsl(18, 74%, 55%);
+    &--sf-1-141{
+        --session-color: #{$color-wug-orange};
         --col-start: 3;
-    }
-
-    @include res-max-tablet{
-        --col-start: 1 !important;
-    }
+    }    
 
     &__head{
         @include flex-set(flex, row, nowrap, 0, center, space-between);
@@ -62,8 +196,7 @@
         }
 
         > small{
-            // --label-display: none;
-            // display: var(--label-display);
+            display: var(--label-display, none);
             padding: .5em;
             background: var(--session-color);
             border-radius: .5em;
@@ -108,7 +241,7 @@
         }
         > summary{
             --pointer-events: none;
-            font-size: .85em;
+            font-size: var(--title-font-size, .7em);
             font-weight: bold;
             pointer-events: var(--pointer-events);
 
@@ -119,10 +252,15 @@
             @include res-min-tablet{
                 list-style: none;
             }
+            &:-webkit-details-marker, &::marker{      
+                @include res-min-tablet{
+                    display: none;
+                }
+            }
         }
 
         p{
-            font-size: .65em;
+            font-size: .5em;
             line-height: 1.5;
         }
     }

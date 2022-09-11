@@ -1,0 +1,8 @@
+// Get only number value from unit eg. 1px will return only 1
+@function remove-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
