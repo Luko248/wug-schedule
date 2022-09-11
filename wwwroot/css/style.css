@@ -39,8 +39,6 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(180deg, white, white 35%, #e6e6e6 80%, #e6e6e6);
-  background-attachment: fixed;
   font-family: 'Roboto';
   background-size: contain;
   overflow-x: hidden; }
@@ -73,13 +71,20 @@ p,
 ul {
   margin: 0; }
 
+h2 {
+  font-size: clamp(1.6rem, 3.5vh, 2.4rem);
+  text-align: center;
+  margin-block-end: 4vh; }
+
 section {
   padding-block: 5vh; }
 
 .container {
   inline-size: calc(100vw - 2rem);
   margin-inline: auto;
-  max-inline-size: 1366px; }
+  max-inline-size: var(--max-w, 1366px); }
+  .container--s {
+    --max-w: 1024px; }
 
 footer small {
   padding-block: 0.8rem; }
@@ -103,7 +108,6 @@ footer small {
   gap: var(--tracks-gap, 1.6rem);
   position: sticky;
   top: 0;
-  background-color: white;
   font-weight: bold;
   color: white;
   z-index: 999;
@@ -114,11 +118,10 @@ footer small {
       --tracks-display: none; } }
   .tracks:after {
     position: absolute;
-    right: -0.8rem;
-    left: -0.8rem;
     content: '';
-    background-color: inherit;
-    z-index: -1; }
+    background-color: white;
+    z-index: -1;
+    inset: -0.8rem; }
   .tracks > div {
     padding: 0.4rem;
     background-color: var(--track-bg-color);
@@ -143,21 +146,19 @@ footer small {
   bottom: 0;
   padding: 0;
   margin: 0;
-  background-color: #e6e6e6;
   list-style: none;
   margin-block-start: 1.6rem;
-  padding-block: 1.6rem; }
+  padding-block-end: 1.6rem; }
   @media only screen and (max-width: 768px) {
     .nav {
       --schedule-gap: 0.2rem;
       padding-block: 0.8rem; } }
   .nav:after {
     position: absolute;
-    right: -0.8rem;
-    left: -0.8rem;
     content: '';
-    background-color: inherit;
-    z-index: -1; }
+    background-color: white;
+    z-index: -1;
+    inset: -0.8rem; }
   .nav__button {
     display: block;
     width: 100%;
@@ -182,6 +183,34 @@ footer small {
     .nav__button > time {
       display: block;
       font-size: .65em; }
+
+.partners {
+  display: grid;
+  align-items: stretch;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: var(--col-template, repeat(auto-fit, minmax(3.2rem, 1fr)));
+  gap: var(--partners-gap, 1.6rem); }
+  @media only screen and (max-width: 768px) {
+    .partners {
+      --col-template: repeat(3, minmax(3.2rem, 1fr));
+      --partners-gap: 0; } }
+  @media only screen and (max-width: 425px) {
+    .partners {
+      --col-template: repeat(2, minmax(3.2rem, 1fr)); } }
+  .partners > a {
+    --img-scale: 1;
+    display: grid;
+    aspect-ratio: 4 / 1.5;
+    text-decoration: none;
+    place-items: center; }
+    @media (hover: hover) {
+      .partners > a:hover {
+        --img-scale: 1.05; } }
+    .partners > a > img {
+      display: block;
+      transform: scale(var(--img-scale));
+      transition: transform 0.25s ease-in-out; }
 
 .schedule {
   --col-count: 3;
@@ -320,10 +349,11 @@ footer small {
     align-content: flex-start;
     justify-content: flex-start;
     grid-template-columns: repeat(var(--col-count), minmax(2.4rem, 1fr));
-    gap: 0.8rem; }
+    gap: var(--speakers-gap, 0.8rem); }
     @media only screen and (max-width: 768px) {
       .session__speakers {
-        --col-count: 1; } }
+        --col-count: 1;
+        --speakers-gap: 0.4rem; } }
   .session__footer {
     display: var(--footer-display);
     font-size: .65em;
@@ -353,21 +383,22 @@ footer small {
     line-height: 1.5; }
 
 .speaker {
-  --pic-size: 4rem;
+  --pic-size: 3.2rem;
   display: grid;
   align-items: center;
   align-content: flex-start;
   justify-content: flex-start;
   grid-template-columns: var(--pic-size) minmax(1.6rem, 1fr);
-  gap: var(--speaker-gap, 1.6rem);
-  font-size: .6em;
+  gap: var(--speaker-gap, 0.8rem);
+  font-size: .5em;
   margin-block: var(--mg-y, 1.6rem); }
   @media only screen and (max-width: 768px) {
     .speaker {
-      --speaker-gap: 0.8rem;
+      --speaker-gap: 0.4rem;
       --mg-y:  0.8rem; } }
-  .speaker + .speaker {
-    margin-block-start: 0; }
+  @media only screen and (max-width: 768px) {
+    .speaker + .speaker {
+      margin-block-start: 0; } }
   .speaker span {
     display: block;
     font-weight: 600; }

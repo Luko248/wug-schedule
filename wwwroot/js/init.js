@@ -424,6 +424,7 @@ function createSpeaker(speaker) {
     const speakerPhoto = document.createElement('img');
     speakerPhoto.setAttribute('src', speaker.photo);
     speakerPhoto.setAttribute('alt', speaker.name + ' photo');
+    speakerPhoto.setAttribute('loading', 'lazy');
     const speakerPhotoWrapper = document.createElement('div');
     speakerPhotoWrapper.setAttribute('class', 'speaker__photo');
     speakerPhotoWrapper.appendChild(speakerPhoto);
