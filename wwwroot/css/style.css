@@ -361,7 +361,13 @@ footer small {
   grid-template-columns: var(--pic-size) minmax(1.6rem, 1fr);
   gap: var(--speaker-gap, 1.6rem);
   font-size: .6em;
-  margin-block: 1.6rem; }
+  margin-block: var(--mg-y, 1.6rem); }
+  @media only screen and (max-width: 768px) {
+    .speaker {
+      --speaker-gap: 0.8rem;
+      --mg-y:  0.8rem; } }
+  .speaker + .speaker {
+    margin-block-start: 0; }
   .speaker span {
     display: block;
     font-weight: 600; }

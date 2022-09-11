@@ -270,7 +270,16 @@
     --pic-size: 4rem;
     @include grid-columns(grid, var(--pic-size) minmax($gap-l, 1fr), var(--speaker-gap, #{$gap-l}), center);
     font-size: .6em;
-    margin-block: $gap-l;
+    margin-block: var(--mg-y, #{$gap-l});
+
+    @include res-max-tablet{
+        --speaker-gap: #{$gap};
+        --mg-y:  #{$gap};
+    }
+
+    + .speaker{
+        margin-block-start: 0;
+    }
 
     span{
         display: block;
