@@ -267,7 +267,7 @@
 }
 
 .speaker{
-    --pic-size: 4rem;
+    --pic-size: 3.2rem;
     @include grid-columns(grid, var(--pic-size) minmax($gap-l, 1fr), var(--speaker-gap, #{$gap}), center);
     font-size: .5em;
     margin-block: var(--mg-y, #{$gap-l});
