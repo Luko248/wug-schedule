@@ -21,7 +21,6 @@
         &:nth-child(1){
             --row-start: 1;        
         }
-
         &:nth-child(2){
             --row-start: 4;        
         }
@@ -213,10 +212,11 @@
 
     &__speakers{
         --col-count: auto-fit;
-        @include grid-columns(grid, repeat(var(--col-count), minmax($gap-xl, 1fr)), $gap, stretch);
+        @include grid-columns(grid, repeat(var(--col-count), minmax($gap-xl, 1fr)), var(--speakers-gap, #{$gap}), stretch);
 
         @include res-max-tablet{
             --col-count: 1;
+            --speakers-gap: #{$gap-s};
         }
     }
 
@@ -268,12 +268,12 @@
 
 .speaker{
     --pic-size: 4rem;
-    @include grid-columns(grid, var(--pic-size) minmax($gap-l, 1fr), var(--speaker-gap, #{$gap-l}), center);
-    font-size: .6em;
+    @include grid-columns(grid, var(--pic-size) minmax($gap-l, 1fr), var(--speaker-gap, #{$gap}), center);
+    font-size: .5em;
     margin-block: var(--mg-y, #{$gap-l});
 
     @include res-max-tablet{
-        --speaker-gap: #{$gap};
+        --speaker-gap: #{$gap-s};
         --mg-y:  #{$gap};
     }
 

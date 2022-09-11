@@ -17,7 +17,6 @@
     @include grid-columns(var(--tracks-display), repeat(var(--col-count, 3), minmax($gap-xl, 1fr)), var(--tracks-gap, #{$gap-l}));
     position: sticky;
     top: 0;
-    background-color: $color-white;
     font-weight: bold;
     color: $color-white;
     z-index: 999;
@@ -29,11 +28,10 @@
     }
     &:after{
         position: absolute;
-        right: -$gap;
-        left: -$gap;
         content: '';
-        background-color: inherit;
+        background-color: $color-white;
         z-index: -1;
+        inset: 0 -$gap;
     }
     
     > div{
@@ -63,10 +61,9 @@
     bottom: 0;
     padding: 0;
     margin: 0;
-    background-color: $color-bg;
     list-style: none;
     margin-block-start: $gap-l;
-    padding-block: $gap-l;
+    padding-block-end: $gap-l;
 
     @include res-max-tablet{
         --schedule-gap: #{$gap-xs};
@@ -75,11 +72,10 @@
 
     &:after{
         position: absolute;
-        right: -$gap;
-        left: -$gap;
         content: '';
-        background-color: inherit;
+        background-color: $color-white;
         z-index: -1;
+        inset: 0 -$gap;
     }
 
     &__button{

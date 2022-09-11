@@ -4,7 +4,11 @@ section{
 .container{
     inline-size: calc(100vw - 2rem);
     margin-inline: auto;
-    max-inline-size: $width-desktop-m;
+    max-inline-size: var(--max-w, #{$width-desktop-m});
+
+    &--s{
+        --max-w: #{$width-desktop-s};
+    }
 }
 
 footer small{
