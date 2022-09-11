@@ -366,8 +366,9 @@ footer small {
     .speaker {
       --speaker-gap: 0.8rem;
       --mg-y:  0.8rem; } }
-  .speaker + .speaker {
-    margin-block-start: 0; }
+  @media only screen and (max-width: 768px) {
+    .speaker + .speaker {
+      margin-block-start: 0; } }
   .speaker span {
     display: block;
     font-weight: 600; }

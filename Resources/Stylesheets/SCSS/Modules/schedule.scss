@@ -278,7 +278,9 @@
     }
 
     + .speaker{
-        margin-block-start: 0;
+        @include res-max-tablet{
+            margin-block-start: 0;
+        }   
     }
 
     span{
