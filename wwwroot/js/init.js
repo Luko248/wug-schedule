@@ -25,28 +25,28 @@ exports.data = [
                         "title": track1Name,
                         "sessions": [
                             {
-                                "title": "Azure SQL Managed Instance Intro",
-                                "description": "O možnostech provozu SQL Serveru v Azure Virtual Machines a o Azure SQL Database toho padlo již mnoho, služba která však zůstávala neprávem m4imo pozornost je Azure SQL Managed Instance. Tato služba je svým profilem a možnostmi v rámci cloud workload asi nejblíže klasickému on-premise SQL Serveru. Pojďme si společně ukázat, co všechno Azure SQL MI umí, jak ji správně nasadit, zabezpečit a využít pro migraci on-prem workloadu.",
+                                "title": "Novinky v Microsoft SQL Serveru 2022",
+                                "description": "Na přednášce si představíme novinky pro vývojáře i administrátory, které Microsoft připravuje pro příští verzi Microsoft SQL Serveru a na praktických ukázkách si předvedeme, proč je důvod se na příští verzi Microsoft SQL Serveru těšit.",
                                 "dateTimeStart": "2022-09-12T09:00:00",
                                 "dateTimeEnd": "2022-09-12T10:15:00",
                                 "speakers": [
                                     {
-                                        "name": "Marek Chmel",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=697&ThumbnailSizeName=medium",
-                                        "role": "MCT, MCSE, Microsoft"
+                                        "name": "David Gešvindr",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2335&ThumbnailSizeName=medium",
+                                        "role": "MVP, MCT, MCSE"
                                     }
                                 ]
                             },
                             {
-                                "title": "Lessons learned from Azure SQL Servers",
-                                "description": "Resource allocation in Azure is not as straightforward as it may look. Let's discuss the caveats and solutions we identified in the last few years. We will talk about storage performance, memory pressure, CPU monitoring & reporting in Azure, and our issues with SOS_Scheduler_Yield & SMT_Stories we published.",
+                                "title": "Parametr, literál nebo proměnná – proč bych se měl zajímat?",
+                                "description": "K sestavení optimálního exekučního plánu vyžaduje SQL Server pokud možno co nejreprezentativnější statistické informace o množině dotazovaných dat. Jako vývojáři mu však můžeme tento proces (ne)chtěně trochu zkomplikovat. Jaké jsou výhody a nevýhody parametrizovaných dotazů, použití proměnných nebo snad v jaké situaci použít literál? Jaký bude dopad jejich použití na procedure cache, rychlost zpracování a samotný exekuční plán? Nejen to bude předmětem přednášky, jejímž cílem bude ukázat trochu skrytá zákouti SQL Serveru, která by však každý vývojář měl bezpečně znát.",
                                 "dateTimeStart": "2022-09-12T10:30:00",
                                 "dateTimeEnd": "2022-09-12T11:45:00",
                                 "speakers": [
                                     {
-                                        "name": "Michal Tinthofer",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2587&ThumbnailSizeName=medium",
-                                        "role": "MCT, MCITP, MCTS, Woodler"
+                                        "name": "Pavel Málek",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2930&ThumbnailSizeName=medium",
+                                        "role": ""
                                     }
                                 ]
                             },
@@ -64,15 +64,15 @@ exports.data = [
                                 ]
                             },
                             {
-                                "title": "Microsoft SQL Servers in AWS",
-                                "description": "Amazon AWS dává architektům několik možností, jakou databázi vybrat pro své řešení. V naší přednášce se zaměříme na Microsoft SQL Server a možnosti jeho využití v rámci různých AWS služeb. Pojďme si společně ukázat jak SQL Server v AWS nasadit, spravovat, zabezpečit a vyřešit HA\/DR scénáře.",
+                                "title": "Autoincrement (identity) není jediná možnost jak generovat PK",
+                                "description": "Hromada aplikací využívá ve spojení s EF Core klasický autoincrement (identity) a není na tom nic špatného. Ale existují i jiné možnosti jak PK generovat a v některých případech může být jejich použití výhodnější. Ukážeme si jaké možnosti to jsou a jaké jsou (ne)výhody.",
                                 "dateTimeStart": "2022-09-12T14:30:00",
                                 "dateTimeEnd": "2022-09-12T15:15:00",
                                 "speakers": [
                                     {
-                                        "name": "Marek Chmel",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=697&ThumbnailSizeName=medium",
-                                        "role": "MCT, MCSE, Microsoft"
+                                        "name": "Jiří Činčura",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1269&ThumbnailSizeName=medium",
+                                        "role": "Microsoft"
                                     }
                                 ]
                             },
@@ -108,27 +108,28 @@ exports.data = [
                         "title": track2Name,
                         "sessions": [
                             {
-                                "title": "Novinky v Microsoft SQL Serveru 2022",
-                                "description": "Na přednášce si představíme novinky pro vývojáře i administrátory, které Microsoft připravuje pro příští verzi Microsoft SQL Serveru a na praktických ukázkách si předvedeme, proč je důvod se na příští verzi Microsoft SQL Serveru těšit.",
+                                "title": "Azure SQL Managed Instance Intro",
+                                "description": "O možnostech provozu SQL Serveru v Azure Virtual Machines a o Azure SQL Database toho padlo již mnoho, služba která však zůstávala neprávem mimo pozornost je Azure SQL Managed Instance. Tato služba je svým profilem a možnostmi v rámci cloud workload asi nejblíže klasickému on-premise SQL Serveru. Pojďme si společně ukázat, co všechno Azure SQL MI umí, jak ji správně nasadit, zabezpečit a využít pro migraci on-prem workloadu.",
                                 "dateTimeStart": "2022-09-12T09:00:00",
                                 "dateTimeEnd": "2022-09-12T10:15:00",
                                 "speakers": [
                                     {
-                                        "name": "David Gešvindr",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2335&ThumbnailSizeName=medium",
-                                        "role": "MVP, MCT, MCSE"
+                                        "name": "Marek Chmel",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=697&ThumbnailSizeName=medium",
+                                        "role": "Microsoft | MCT, MCSE"
                                     }
                                 ]
                             },
                             {
-                                "title": "Parametr, literál nebo proměnná – proč bych se měl zajímat?",
-                                "description": "K sestavení optimálního exekučního plánu vyžaduje SQL Server pokud možno co nejreprezentativnější statistické informace o množině dotazovaných dat. Jako vývojáři mu však můžeme tento proces (ne)chtěně trochu zkomplikovat. Jaké jsou výhody a nevýhody parametrizovaných dotazů, použití proměnných nebo snad v jaké situaci použít literál? Jaký bude dopad jejich použití na procedure cache, rychlost zpracování a samotný exekuční plán? Nejen to bude předmětem přednášky, jejímž cílem bude ukázat trochu skrytá zákouti SQL Serveru, která by však každý vývojář měl bezpečně znát.",
+                                "title": "Lessons learned from Azure SQL Servers",
+                                "description": "Resource allocation in Azure is not as straightforward as it may look. Let's discuss the caveats and solutions we identified in the last few years. We will talk about storage performance, memory pressure, CPU monitoring & reporting in Azure, and our issues with SOS_Scheduler_Yield & SMT_Stories we published.",
                                 "dateTimeStart": "2022-09-12T10:30:00",
                                 "dateTimeEnd": "2022-09-12T11:45:00",
                                 "speakers": [
                                     {
-                                        "name": "Pavel Málek",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2930&ThumbnailSizeName=medium"
+                                        "name": "Michal Tinthofer",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2587&ThumbnailSizeName=medium",
+                                        "role": "Woodler | MCT, MCITP, MCTS"
                                     }
                                 ]
                             },
@@ -141,20 +142,20 @@ exports.data = [
                                     {
                                         "name": "Tomáš Herceg",
                                         "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2217&ThumbnailSizeName=medium",
-                                        "role": "MVP, RIGANTI s.r.o."
+                                        "role": "RIGANTI s.r.o. | MVP"
                                     }
                                 ]
                             },
                             {
-                                "title": "Autoincrement (identity) není jediná možnost jak generovat PK",
-                                "description": "Hromada aplikací využívá ve spojení s EF Core klasický autoincrement (identity) a není na tom nic špatného. Ale existují i jiné možnosti jak PK generovat a v některých případech může být jejich použití výhodnější. Ukážeme si jaké možnosti to jsou a jaké jsou (ne)výhody.",
+                                "title": "Microsoft SQL Servers in AWS",
+                                "description": "Amazon AWS dává architektům několik možností, jakou databázi vybrat pro své řešení. V naší přednášce se zaměříme na Microsoft SQL Server a možnosti jeho využití v rámci různých AWS služeb. Pojďme si společně ukázat jak SQL Server v AWS nasadit, spravovat, zabezpečit a vyřešit HA\/DR scénáře.",
                                 "dateTimeStart": "2022-09-12T14:30:00",
                                 "dateTimeEnd": "2022-09-12T15:15:00",
                                 "speakers": [
                                     {
-                                        "name": "Jiří Činčura",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1269&ThumbnailSizeName=medium",
-                                        "role": "MVP"
+                                        "name": "Marek Chmel",
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=697&ThumbnailSizeName=medium",
+                                        "role": "Microsoft | MCT, MCSE"
                                     }
                                 ]
                             },
@@ -167,7 +168,7 @@ exports.data = [
                                     {
                                         "name": "Michal Tinthofer",
                                         "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2587&ThumbnailSizeName=medium",
-                                        "role": "MCT, MCITP, MCTS, Woodler"
+                                        "role": "Woodler | MCT, MCITP, MCTS"
                                     }
                                 ]
                             },
@@ -202,7 +203,8 @@ exports.data = [
                                 "speakers": [
                                     {
                                         "name": "Štěpán Bechynský",
-                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium"
+                                        "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium",
+                                        "role": ""
                                     }
                                 ]
                             },
