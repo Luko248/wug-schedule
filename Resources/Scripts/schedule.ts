@@ -42,9 +42,9 @@ function getSessionsCount(schedule){
 function getConferenceDay(){
     const currentDate = new Date();
     let today = currentDate.getDate();
-    const firstDayDate = new Date('2022-09-12').getDate()
-    const secondDayDate = new Date('2022-09-12').getDate()
-    const thirdDayDate = new Date('2022-09-12').getDate()
+    const firstDayDate = new Date('2022-09-13').getDate()
+    const secondDayDate = new Date('2022-09-14').getDate()
+    const thirdDayDate = new Date('2022-09-15').getDate()
     let conferenceDay = 0
 
    if (today <= firstDayDate){

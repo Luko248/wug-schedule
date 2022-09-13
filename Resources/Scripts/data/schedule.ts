@@ -31,76 +31,6 @@ export const data = [
                             ]
                         },
                         {
-                            "title": "Evoluce architektury v e-commerce",
-                            "description": "Z garážovky evropskou jedničkou\" - tak by se dal stroze popsat příběh Notina. Jak ale firma, která si většinu softwaru vyvíjí sama na technologiích Microsoftu, udržuje tempo s neustále rostoucím počtem zákazníků a objednávek? Přiblížíme si prakticky, jaké hodnoty a principy jsou pro nás důležité a jak se mění v čase architektura webu Notina z monolitu na distribuovaný systém, tak aby držel krok s ambicemi firmy.",
-                            "dateTimeStart": "2022-09-13T10:30:00",
-                            "dateTimeEnd": "2022-09-13T11:45:00",
-                            "speakers": [
-                                {
-                                    "name": "Jan Remunda",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2950&ThumbnailSizeName=medium",
-                                    "role": "Notino"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Zpracování dat v CERNu",
-                            "description": "Zajímá vás, jak se zpracovávají data z obřích částicových detektorů v Evropské laboratoři pro částicový výzkum? Podělím se s vámi o své zkušenosti, konkrétně z prostředí experimentu CMS. Na začátku nastíním, jak funguje výzkum částic, jak vypadají jejich detektory a jaké výzvy to představuje pro softwarové zpracování dat. V hlavní části pak ukážu několik příkladů, jak se k těmto výzvám postavit.",
-                            "dateTimeStart": "2022-09-13T13:00:00",
-                            "dateTimeEnd": "2022-09-13T13:45:00",
-                            "speakers": [
-                                {
-                                    "name": "Jan Kašpar",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3364&ThumbnailSizeName=medium",
-                                    "role": "Edhouse"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Azure - hosting aplikací na steroidech",
-                            "description": "Zkušenosti, tipy a triky z provozu stovek aplikací na platformě Azure (PaaS). Jak nezaplatit majlant, jak využít diagnostické možnosti naplno, škálování, atp.",
-                            "dateTimeStart": "2022-09-13T14:00:00",
-                            "dateTimeEnd": "2022-09-13T15:15:00",
-                            "speakers": [
-                                {
-                                    "name": "Robert Haken",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2315&ThumbnailSizeName=medium",
-                                    "role": "MVP, MCT, MCSE, MCPD, HAVIT, s.r.o."
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Migrace stávajících aplikací do Kubernetes",
-                            "description": "Vyvíjíte aplikaci a nevíte, v jakém prostředí ve finále poběží? Chcete být nezávislí na konkrétním cloudu, anebo se vám prostě jen líbí myšlenka kontejnerizace aplikací? Na této přednášce si ukážeme, co obnáší provozování .NET aplikací v kontejnerech, jak si upravovat Docker file a jak nachystat manifesty pro provozování aplikace v Kubernetes. Budeme se bavit i o tom, jaké výhody a nevýhody provozování aplikací v Kubernetes má a kdy se pro tuto možnost rozhodnout.",
-                            "dateTimeStart": "2022-09-13T15:30:00",
-                            "dateTimeEnd": "2022-09-13T16:45:00",
-                            "speakers": [
-                                {
-                                    "name": "Tomáš Herceg",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2217&ThumbnailSizeName=medium",
-                                    "role": "MVP, RIGANTI s.r.o."
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": track2Name,
-                    "sessions": [
-                        {
-                            "title": ".NET MAUI: MVVM, MVU, AOT, IoC, Shell, Handler...all the buzzwords",
-                            "description": "S příchodem .NET MAUI se pojí několik buzzwordů, zkratek a nových názvů. Některé již možná znáte, s některými se teprve seznámíme. Podíváme se tedy na ně a na to, co se pod nima skrývá a k čemu je při vývoji v MAUI můžete použít.",
-                            "dateTimeStart": "2022-09-13T09:00:00",
-                            "dateTimeEnd": "2022-09-13T10:15:00",
-                            "speakers": [
-                                {
-                                    "name": "Roman Jašek",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1299&ThumbnailSizeName=medium",
-                                    "role": "MVP, RIGANTI s.r.o.",
-                                }
-                            ]
-                        },
-                        {
                             "title": "Implementace časových zón v single page aplikaci s .NET backendem",
                             "description": "Příběh o tom, jak zdánlivě banální uživatelská potřeba vede k rychlém vystřízlivění, nebo jak geopolitika může ovlivnit váš kód. Povíme vám, jak jsme se prali nejen s teorií časových zón, ale také s jejich různorodou podporou v browserech a na různých platformách, a jak jsme chtěli, aby naše aplikace fungovala i v Antarktidě.",
                             "dateTimeStart": "2022-09-13T10:30:00",
@@ -119,6 +49,76 @@ export const data = [
                             ]
                         },
                         {
+                            "title": "Zpracování dat v CERNu",
+                            "description": "Zajímá vás, jak se zpracovávají data z obřích částicových detektorů v Evropské laboratoři pro částicový výzkum? Podělím se s vámi o své zkušenosti, konkrétně z prostředí experimentu CMS. Na začátku nastíním, jak funguje výzkum částic, jak vypadají jejich detektory a jaké výzvy to představuje pro softwarové zpracování dat. V hlavní části pak ukážu několik příkladů, jak se k těmto výzvám postavit.",
+                            "dateTimeStart": "2022-09-13T13:00:00",
+                            "dateTimeEnd": "2022-09-13T13:45:00",
+                            "speakers": [
+                                {
+                                    "name": "Jan Kašpar",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3373&ThumbnailSizeName=medium",
+                                    "role": "Edhouse"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Azure – hosting aplikací na steroidech",
+                            "description": "Máte své aplikace v klasickém webhostingu, staráte se o své žiletky v serverhostingu, poskakujete kolem pronajatých virtuálů nebo hostujete webové aplikace on-premise? Přijďte se podívat, jak použít platformu Azure pro provoz vašich aplikací. Nasdílím s vámi své zkušenosti z migrace stovek aplikací do Azure. V čem je Azure výhodný a v čem vám bude zatápět. Na co si dát pozor a jak nezaplatit majlant. Co budete při migracích řešit a jak využít možností Azure naplno. Představím vám Azure App Service, Azure SQL, Azure Storage, Azure Application Insights a další platformní služby pro provoz vašich aplikací.",
+                            "dateTimeStart": "2022-09-13T14:00:00",
+                            "dateTimeEnd": "2022-09-13T15:15:00",
+                            "speakers": [
+                                {
+                                    "name": "Robert Haken",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2315&ThumbnailSizeName=medium",
+                                    "role": "HAVIT, s.r.o. | MVP, MCT, MCSE, MCPD"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Migrace stávajících aplikací do Kubernetes",
+                            "description": "Vyvíjíte aplikaci a nevíte, v jakém prostředí ve finále poběží? Chcete být nezávislí na konkrétním cloudu, anebo se vám prostě jen líbí myšlenka kontejnerizace aplikací? Na této přednášce si ukážeme, co obnáší provozování .NET aplikací v kontejnerech, jak si upravovat Docker file a jak nachystat manifesty pro provozování aplikace v Kubernetes. Budeme se bavit i o tom, jaké výhody a nevýhody provozování aplikací v Kubernetes má a kdy se pro tuto možnost rozhodnout.",
+                            "dateTimeStart": "2022-09-13T15:30:00",
+                            "dateTimeEnd": "2022-09-13T16:45:00",
+                            "speakers": [
+                                {
+                                    "name": "Tomáš Herceg",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2217&ThumbnailSizeName=medium",
+                                    "role": "RIGANTI s.r.o. | MVP"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": track2Name,
+                    "sessions": [
+                        {
+                            "title": "Senior programátorem snadno a rychle",
+                            "description": "Povídání určené všem začínajícím programátorům, aby věděli jak se připravit na svoji kariéru a jak uspět. Pro manažery a seniory pak představím, jak probíhají mnou vedené pohovory, zaškolování a mentoring v týmu. Pokusím se jako obvykle vydat ze sebe co nejvíce zkušeností z praxe.",
+                            "dateTimeStart": "2022-09-13T09:00:00",
+                            "dateTimeEnd": "2022-09-13T10:15:00",
+                            "speakers": [
+                                {
+                                    "name": "Jiří Pokorný",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2004&ThumbnailSizeName=medium",
+                                    "role": "SolarWinds | MCP, MCTS"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Evoluce architektury v e-commerce",
+                            "description": "Z garážovky evropskou jedničkou\" - tak by se dal stroze popsat příběh Notina. Jak ale firma, která si většinu softwaru vyvíjí sama na technologiích Microsoftu, udržuje tempo s neustále rostoucím počtem zákazníků a objednávek? Přiblížíme si prakticky, jaké hodnoty a principy jsou pro nás důležité a jak se mění v čase architektura webu Notina z monolitu na distribuovaný systém, tak aby držel krok s ambicemi firmy.",
+                            "dateTimeStart": "2022-09-13T10:30:00",
+                            "dateTimeEnd": "2022-09-13T11:45:00",
+                            "speakers": [
+                                {
+                                    "name": "Jan Remunda",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2950&ThumbnailSizeName=medium",
+                                    "role": "Notino"
+                                }
+                            ]
+                        },
+                        {
                             "title": "Blazor Hybrid v .NET MAUI",
                             "description": "Ukáži vám základy hybridní aplikace, využití existujících Blazor komponent a co vše obnáší multiplatformní vývoj v .NET MAUI Blazor Hybrid.",
                             "dateTimeStart": "2022-09-13T13:00:00",
@@ -126,7 +126,7 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Michael Melena",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3368&ThumbnailSizeName=medium",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3375&ThumbnailSizeName=medium",
                                     "role": "HAVIT"
                                 }
                             ]
@@ -184,7 +184,7 @@ export const data = [
                                 {
                                     "name": "Petr Vlk",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1278&ThumbnailSizeName=medium",
-                                    "role": "MVP, MCP, MCITP, MCTS, KPCS CZ"
+                                    "role": "KPCS CZ | MVP, MCP, MCITP, MCTS"
                                 }
                             ]
                         },
@@ -196,7 +196,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Jan Grundmann",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3366&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3366&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -209,7 +210,7 @@ export const data = [
                                 {
                                     "name": "Petr Vlk",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1278&ThumbnailSizeName=medium",
-                                    "role": "MVP, MCP, MCITP, MCTS, KPCS CZ"
+                                    "role": "KPCS CZ | MVP, MCP, MCITP, MCTS"
                                 }
                             ]
                         },
@@ -245,7 +246,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Martin Michálek",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1088&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1088&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -258,7 +260,7 @@ export const data = [
                                 {
                                     "name": "Robert Haken",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2315&ThumbnailSizeName=medium",
-                                    "role": "MVP, MCT, MCSE, MCPD, HAVIT, s.r.o."
+                                    "role": "HAVIT, s.r.o. | MVP, MCT, MCSE, MCPD"
                                 }
                             ]
                         },
@@ -270,7 +272,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Martin Michálek",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1088&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1088&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -283,7 +286,7 @@ export const data = [
                                 {
                                     "name": "Tomáš Herceg",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2217&ThumbnailSizeName=medium",
-                                    "role": "MVP, RIGANTI s.r.o.",
+                                    "role": "RIGANTI s.r.o. | MVP"
                                 }
                             ]
                         },
@@ -296,7 +299,7 @@ export const data = [
                                 {
                                     "name": "Jiří Činčura",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1269&ThumbnailSizeName=medium",
-                                    "role": "MVP"
+                                    "role": "Microsoft"
                                 }
                             ]
                         }
@@ -306,15 +309,15 @@ export const data = [
                     'title': track2Name,
                     "sessions": [
                         {
-                            "title": "Senior programátorem snadno a rychle",
-                            "description": "Povídání určené všem začínajícím programátorům, aby věděli jak se připravit na svoji kariéru a jak uspět. Pro manažery a seniory pak představím, jak probíhají mnou vedené pohovory, zaškolování a mentoring v týmu. Pokusím se jako obvykle vydat ze sebe co nejvíce zkušeností z praxe.",
+                            "title": ".NET MAUI: MVVM, MVU, AOT, IoC, Shell, Handler...all the buzzwords",
+                            "description": "S příchodem .NET MAUI se pojí několik buzzwordů, zkratek a nových názvů. Některé již možná znáte, s některými se teprve seznámíme. Podíváme se tedy na ně a na to, co se pod nima skrývá a k čemu je při vývoji v MAUI můžete použít.",
                             "dateTimeStart": "2022-09-14T09:00:00",
                             "dateTimeEnd": "2022-09-14T10:15:00",
                             "speakers": [
                                 {
-                                    "name": "Jiří Pokorný",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=2004&ThumbnailSizeName=medium",
-                                    "role": "MCP, MCTS, SolarWinds"
+                                    "name": "Roman Jašek",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1299&ThumbnailSizeName=medium",
+                                    "role": "RIGANTI s.r.o. | MVP"
                                 }
                             ]
                         },
@@ -352,7 +355,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Štěpán Bechynský",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -382,7 +386,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Radek Zahradník",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3018&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3018&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -407,7 +412,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Radek Zahradník",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3018&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3018&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         },
@@ -457,7 +463,7 @@ export const data = [
                                 {
                                     "name": "Jiří Činčura",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1269&ThumbnailSizeName=medium",
-                                    "role": "MVP"
+                                    "role": "Microsoft"
                                 }
                             ]
                         },
@@ -496,7 +502,7 @@ export const data = [
                                 {
                                     "name": "Jiří Činčura",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1269&ThumbnailSizeName=medium",
-                                    "role": "MVP"
+                                    "role": "Microsoft"
                                 }
                             ]
                         },
@@ -539,7 +545,7 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Jan Bobek",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3363&ThumbnailSizeName=medium",
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3374&ThumbnailSizeName=medium",
                                     "role": "Edhouse"
                                 }
                             ]
@@ -553,7 +559,7 @@ export const data = [
                                 {
                                     "name": "Martin Dybal",
                                     "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=3352&ThumbnailSizeName=medium",
-                                    "role": "MVP, RIGANTI s.r.o.",
+                                    "role": "RIGANTI s.r.o. | MVP"
                                 }
                             ]
                         },
@@ -578,7 +584,8 @@ export const data = [
                             "speakers": [
                                 {
                                     "name": "Štěpán Bechynský",
-                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium"
+                                    "photo": "https://www.wug.cz/ContentPages/GetFile.ashx?PhotoID=1282&ThumbnailSizeName=medium",
+                                    "role": ""
                                 }
                             ]
                         }
