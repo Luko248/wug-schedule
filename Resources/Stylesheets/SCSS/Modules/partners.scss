@@ -1,12 +1,12 @@
 @import "../Base/global";
 
 .partners{
-    @include grid-columns(grid, var(--col-template, repeat(auto-fit, minmax(#{$gap-xxl}, 1fr))), var(--partners-gap, #{$gap-l}), stretch);
-
+    @include flex-set(flex, row, wrap, var(--partners-gap, #{$gap-xxl}), stretch, center, center);
 
     @include res-max-tablet{
+        --partners-gap: #{$gap-l};
         --col-template: repeat(3, minmax(#{$gap-xxl}, 1fr));
-        --partners-gap: 0;
+        @include grid-columns(grid, var(--col-template, repeat(auto-fit, minmax(#{$gap-xxl}, 1fr))), var(--partners-gap), stretch);       
     }
 
     @include res-max-mobile-l{
